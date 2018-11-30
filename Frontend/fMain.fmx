@@ -1,0 +1,64 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object StringGrid: TStringGrid
+    Align = Client
+    CanFocus = True
+    ClipChildren = True
+    Size.Width = 640.000000000000000000
+    Size.Height = 359.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    RowHeight = 10.000000000000000000
+    RowCount = 2
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 334.000000000000000000
+  end
+  object HeadPanel: TPanel
+    Align = MostTop
+    Size.Width = 640.000000000000000000
+    Size.Height = 65.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object HeaderLabel: TLabel
+      Align = Center
+      AutoSize = True
+      StyledSettings = [Family, FontColor]
+      Size.Width = 232.000000000000000000
+      Size.Height = 62.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 46.000000000000000000
+      TextSettings.Font.StyleExt = {00020000000000000004000000}
+      Text = 'Table Editor'
+      TabOrder = 1
+    end
+  end
+  object BottomPanel: TPanel
+    Align = MostBottom
+    Position.Y = 424.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object IdLabel: TLabel
+      AutoSize = True
+      StyledSettings = [Family, FontColor]
+      Position.X = 12.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 24.000000000000000000
+      TextSettings.Font.StyleExt = {00030000000000000004000000}
+      Text = 'Table ID = 1'
+      TabOrder = 1
+    end
+  end
+end
