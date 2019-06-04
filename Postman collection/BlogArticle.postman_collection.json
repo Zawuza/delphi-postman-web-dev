@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "7cc9d180-801e-497f-9668-8f2c376362a0",
+		"name": "BlogArticle",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get table",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/table/:id",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"table",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Returns an example table 2x2"
+			},
+			"response": [
+				{
+					"name": "Get table",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/table/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"table",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": ""
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": ""
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Nov 2018 12:54:34 GMT"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"af-MmpVeTvfnSW88c4riXD0uw\""
+						},
+						{
+							"key": "Server",
+							"value": "nginx"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n\t\"rows\": 2,\n\t\"columns\": 2,\n\t\"table\": [[1,2],[1,2]]\n}"
+				}
+			]
+		},
+		{
+			"name": "Post table",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rows\": 2,\n    \"columns\": 2,\n    \"table\": [\n        [\n            1,\n            2\n        ],\n        [\n            1,\n            2\n        ]\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{url}}/table",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"table"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post table",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rows\": 2,\n    \"columns\": 2,\n    \"table\": [\n        [\n            1,\n            2\n        ],\n        [\n            1,\n            2\n        ]\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{url}}/table",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"table"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n\t\"success\": true,\n\t\"id\": 1\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cb1ab3ab-91fc-428d-b561-7653102eb6f4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bcda6a13-0793-40cc-b638-3624e8422950",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "25d2e6b6-183c-4fbd-80e3-b28a7928a197",
+			"key": "url",
+			"value": "http://localhost",
+			"type": "string"
+		}
+	]
+}
