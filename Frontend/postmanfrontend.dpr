@@ -3,7 +3,8 @@ program postmanfrontend;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  fMain in 'fMain.pas' {Form1};
+  fMain in 'fMain.pas' {Form1},
+  dmGetRequest in 'dmGetRequest.pas' {GetRequestDataModule: TDataModule};
 
 {$R *.res}
 
