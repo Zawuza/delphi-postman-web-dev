@@ -31,12 +31,12 @@ object Form1: TForm1
       Align = Center
       AutoSize = True
       StyledSettings = [Family, FontColor]
-      Size.Width = 232.000000000000000000
+      Size.Width = 409.000000000000000000
       Size.Height = 62.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Size = 46.000000000000000000
       TextSettings.Font.StyleExt = {00020000000000000004000000}
-      Text = 'Table Editor'
+      Text = 'Number table Editor'
       TabOrder = 1
     end
   end
