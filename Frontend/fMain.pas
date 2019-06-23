@@ -43,8 +43,7 @@ type
   end;
 
 const
-  MOCK_SERVER_ADDR =
-    'https://83df8ae3-135f-414e-ac93-70813c9a2e19.mock.pstmn.io';
+  MOCK_SERVER_ADDR = '';
 
 var
   Form1: TForm1;
