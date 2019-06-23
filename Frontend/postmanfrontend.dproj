@@ -137,7 +137,7 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="dmPostRequest.pas">
-            <Form>DataModule1</Form>
+            <Form>PostRequestDataModule</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

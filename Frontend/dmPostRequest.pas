@@ -12,10 +12,12 @@ uses
   REST.Client,
 
   Data.Bind.Components,
-  Data.Bind.ObjectScope;
+  Data.Bind.ObjectScope,
+
+  FMX.Dialogs;
 
 type
-  TDataModule1 = class(TDataModule)
+  TPostRequestDataModule = class(TDataModule)
     RESTClient1: TRESTClient;
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
@@ -27,16 +29,13 @@ type
       ATable: TObjectList<TStringList>): string;
   end;
 
-var
-  DataModule1: TDataModule1;
-
 implementation
 
 {%CLASSGROUP 'FMX.Controls.TControl'}
 {$R *.dfm}
 { TDataModule1 }
 
-function TDataModule1.DoRequest(AServerAddress: string;
+function TPostRequestDataModule.DoRequest(AServerAddress: string;
   ATable: TObjectList<TStringList>): string;
 var
   LStrList: TStringList;
@@ -72,6 +71,13 @@ begin
 
   RESTClient1.BaseURL := AServerAddress;
   RESTRequest1.Body.Add(LJSON);
+
+  ShowMessage(LJSON.ToString);
+
+  RESTRequest1.Execute;
+
+  Result := ((RESTResponse1.JSONValue as TJSONObject).Values['id']
+    as TJSONNumber).ToString;
 end;
 
 end.

@@ -80,6 +80,7 @@ object Form1: TForm1
       Size.PlatformDefault = False
       TabOrder = 2
       Text = 'Save table'
+      OnClick = SaveTableButtonClick
     end
   end
 end
